@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Btn from "./btn";
 
 export default function Input() {
     const [board, setBoard] = useState(
@@ -10,26 +11,32 @@ export default function Input() {
 
         const newBoard = board.map((row) => [...row]);
         newBoard[i][j] = value;
+
+        console.log("Updated board:", newBoard);
+
         setBoard(newBoard);
     };
 
     return (
-        <div className="grid">
-            {board.map((row, i) =>
-                row.map((cell, j) => (
-                    <input
-                        key={`${i}-${j}`}
-                        type="text"
-                        className="cell"
-                        value={cell}
-                        maxLength={1}
-                        placeholder={`${i + 1},${j + 1}`}
-                        onChange={(e) =>
-                            handleOnchange(i, j, e.target.value)
-                        }
-                    />
-                ))
-            )}
-        </div>
+        <>
+            <div className="grid">
+                {board.map((row, i) =>
+                    row.map((cell, j) => (
+                        <input
+                            key={`${i}-${j}`}
+                            type="text"
+                            className="cell"
+                            value={cell}
+                            maxLength={1}
+                            placeholder={`${i + 1},${j + 1}`}
+                            onChange={(e) =>
+                                handleOnchange(i, j, e.target.value)
+                            }
+                        />
+                    ))
+                )}
+            </div>
+            <Btn board={board} />
+        </>
     );
 }

@@ -10,7 +10,6 @@ export default function Sudoku() {
             <Title />
             <Input />
             <Info />
-            <Btn />
         </>
     );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Soln from "./soln";
 
-export default function Btn() {
+export default function Btn({board}) {
     let [isPop, setIspop] = useState(false);
     let onClose = () => setIspop(false); 
     return (
@@ -15,7 +15,7 @@ export default function Btn() {
             </div>
             {isPop && (
                 <>
-                    <Soln onClose={onClose} />
+                    <Soln onClose={onClose} board={board} />
                 </>
             )}
         </>
