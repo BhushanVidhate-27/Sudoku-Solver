@@ -80,3 +80,9 @@ button:hover {
     width: fit-content;
     text-align: center;
 }
+.popup input {
+    border: none;
+    background: #DFCBB3;
+    text-align: center;
+    font-size: large;
+}
