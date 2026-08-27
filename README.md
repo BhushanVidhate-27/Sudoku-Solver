@@ -160,12 +160,11 @@ sudoku.wasm
 
 ## Author
 
-**Bhushan Vidhate**
 **Varunraj surase**
+**Bhushan Vidhate**
 
 GitHub: 
 https://github.com/BhushanVidhate-27
-
 https://github.com/VarunRaj-Surase
 ---
 
